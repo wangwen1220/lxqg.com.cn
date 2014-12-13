@@ -1,0 +1,16 @@
+{
+  "name": "Lixin main app",
+  "title": "立信企管",
+  "version": "0.1.0",
+  "author": "Steven <wangwen1220#gmail.com>",
+  "description": "http://www.lxqg.com.cn",
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib-stylus": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-copy": "*"
+  }
+}
