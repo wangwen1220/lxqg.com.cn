@@ -8,7 +8,7 @@
   <meta name="author" content="Steven" />
   <meta name="keywords" content="<?php echo $keywords ?>" />
   <meta name="description" content="<?php echo $description ?>" />
-  <link rel="stylesheet" href="css/main-debug.css" />
+  <link rel="stylesheet" href="css/main.css" />
   <!-- <script src="js/cssrefresh.js"></script> -->
   <!-- <script src="js/live.js"></script> -->
   <!--[if lt IE 9]>
@@ -22,7 +22,7 @@
   <script src="js/jquery.js"></script>
   <script src="js/jquery-address.js"></script>
   <script src="js/jquery-switchable.js"></script>
-  <script src="js/main-debug.js"></script>
+  <script src="js/main.js"></script>
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 </head>
 

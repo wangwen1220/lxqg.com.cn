@@ -64,7 +64,8 @@ module.exports = function(grunt) {
       options: {
         report: 'gzip',
         mangle: true, // Specify mangle: false to prevent changes to your variable and function names.
-        banner: '/*! <%= pkg.name %> | <%= pkg.author %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+        // banner: '/*! <%= pkg.name %> | <%= pkg.author %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+        banner: '/*! <%= pkg.name %> | <%= pkg.author %> */\n'
       },
       beautify: {
          ascii_only: true // 中文 ascii 化，非常有用！防止中文乱码的神配置
@@ -78,7 +79,7 @@ module.exports = function(grunt) {
     },
 
     // 清除生产目录
-    clean: ['dest/'],
+    clean: ['dist/'],
 
     // 复制文件，打包到生产目录下
     copy: {
@@ -87,26 +88,27 @@ module.exports = function(grunt) {
           expand: true,
           cwd: './',
           // src: '*.htm?',
-          src: ['*', '!*-bak.*', '!gruntfile.js', '!package.json'],
+          // src: ['*', '!*-bak.*', '!gruntfile.js', '!package.json'],
+          src: ['*.htm?', '*.php', 'favicon.ico', '.htaccess'],
           // flatten: true,
           filter: 'isFile',
-          dest: 'dest/'
+          dest: 'dist/'
         }, {
           expand: true,
           cwd: 'img/',
           src: ['**', '!bak/**', '!*-bak.*'],
-          dest: 'dest/img/'
+          dest: 'dist/img/'
         }, {
           expand: true,
           cwd: 'css/',
           src: ['**', '!bak/**', '!*.less', '!*.styl', '!*.scss', '!*-bak.*', '!*-debug.*'],
-          dest: 'dest/css/'
+          dest: 'dist/css/'
         }, {
           expand: true,
           cwd: 'js/',
           // src: ['**', '!bak/**', '!**/bak/**', '!*.*', '*.js', '!*-bak.js', '!*-debug.js', '!**/*-debug.*', '!**/package.json', '!cssrefresh.js', '!live.js'],
           src: ['**', '!bak/**', '!**/bak/**', '!*-bak.*', '!*-debug.*', '!**/*-debug.*', '!**/package.json', '!cssrefresh.*', '!live.*'],
-          dest: 'dest/js/'
+          dest: 'dist/js/'
         }]
       }
     },

@@ -1002,7 +1002,7 @@ textarea[contenteditable] {
 }
 #main .livechat .btn a {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
 }
 #main .livechat .btn img {
   vertical-align: middle;

@@ -1,0 +1,6 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^lxqg\.wenwang\.org$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.lxqg\.wenwang\.org$
+RewriteRule ^/?$ "http\:\/\/lxqg\.com\.cn\/" [R=301,L]
+
